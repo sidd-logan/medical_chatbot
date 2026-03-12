@@ -1,6 +1,6 @@
 # MediChat Pro
 
-A Streamlit-based application that allows users to upload medical PDF documents, process them into a searchable vector store, and interact with the content via an AI-powered chat interface. The backend uses EuriAI's chat model through the `euriai` package and LangChain utilities for embeddings and FAISS for vector storage.
+A Streamlit-based application that allows users to upload medical PDF documents, process them into a searchable vector store, and interact with the content via an AI-powered chat interface. The backend uses OpenAI's chat model through the `OpenAI` package and LangChain utilities for embeddings and FAISS for vector storage.
 
 ---
 
@@ -18,7 +18,7 @@ A Streamlit-based application that allows users to upload medical PDF documents,
 ## 🛠️ Prerequisites
 
 - Python 3.11 or later
-- An [Euri](https://euriai.com) API key (set in `EURI_API_KEY` environment variable)
+- An (https://OpenAI.com) API key (set in `OPENAI_API_KEY` environment variable)
 
 ---
 
@@ -40,7 +40,7 @@ A Streamlit-based application that allows users to upload medical PDF documents,
    ```
 4. Create a `.env` file or export the API key directly:
    ```bash
-   echo "EURI_API_KEY=your_key_here" > .env
+   echo "OPENAI_API_KEY=your_key_here" > .env
    ```
    or set the environment variable in your shell/OS.
 
@@ -70,7 +70,7 @@ The assistant will respond based on the content of your uploaded files.
 ├── main.py                # Streamlit application entry point
 ├── requirements.txt       # Python dependencies
 ├── app/
-│   ├── chat_utils.py      # Wrapper around EuriAI chat model
+│   ├── chat_utils.py      # Wrapper around OpenAI chat model
 │   ├── config.py          # API key configuration
 │   ├── pdf_utils.py       # PDF text extraction helper
 │   ├── ui.py              # Streamlit UI components (uploader)
@@ -99,7 +99,7 @@ See `requirements.txt` for the full list. Key packages include:
 - `faiss-cpu` – vector store
 - `langchain`, `langchain_community` – LLM utilities
 - `sentence-transformers` – embeddings
-- `euriai` – LLM client
+- `OpenAI` – LLM client
 
 ---
 
