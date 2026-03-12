@@ -6,12 +6,12 @@ _=load_dotenv(find_dotenv())
 # environment variable. You can also hard‑code a value here for quick tests,
 # but make sure to remove it before committing.
 
-API_KEY = os.environ["EURI_API_KEY"]
+API_KEY = os.environ["OPENAI_API_KEY"]
 
 # sanity check so the app fails fast with a meaningful message instead of
 # a confusing 401 from the HTTP client.
 if not API_KEY:
     raise RuntimeError(
-        "EURI_API_KEY environment variable is not set. "
+        "OPENAI_API_KEY environment variable is not set. "
         "Please export a valid key or set it in app/config.py."
     )
